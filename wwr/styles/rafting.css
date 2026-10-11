@@ -19,7 +19,8 @@ body {
 header,
 main,
 footer {
-    width: 840px;
+    width: 100%;
+    max-width: 840px;
     margin: 0 auto;
 }
 
@@ -47,13 +48,12 @@ article {
 }
 
 .adventures {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     gap: 10px;
 }
 
 .adventures figure {
-    flex: 1;
     text-align: center;
 }
 
@@ -159,4 +159,46 @@ footer {
 footer .socialmedia {
     display: flex;
     gap: 10px;
+}
+
+/* Newsletter */
+.newsletter {
+    background-color: #eaf4f8;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.newsletter form {
+    display: grid;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.newsletter input {
+    padding: 10px;
+    width: 100%;
+}
+
+.newsletter button {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 12px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.cta-button {
+    display: inline-block;
+    text-decoration: none;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 12px 20px;
+    border-radius: 5px;
+}
+
+.cta {
+    text-align: center;
+    background-color: #eaf4f8;
+    padding: 24px;
 }
