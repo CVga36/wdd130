@@ -202,3 +202,52 @@ footer .socialmedia {
     background-color: #eaf4f8;
     padding: 24px;
 }
+
+/* Contact Form */
+.contact-form {
+    background-color: #eaf4f8;
+    padding: 24px;
+    border-radius: 8px;
+}
+
+.contact-form form {
+    display: grid;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.contact-form input[type="text"],
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #999;
+    border-radius: 5px;
+    font-family: var(--body-font);
+    font-size: 1rem;
+}
+
+.contact-form fieldset {
+    border: 1px solid #999;
+    border-radius: 5px;
+    padding: 15px;
+}
+
+.contact-form legend {
+    font-weight: bold;
+    padding: 0 8px;
+}
+
+.contact-form button {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.contact-form input[type="radio"] {
+    margin: 10px 5px 10px 0;
+}
