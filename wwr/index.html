@@ -2,121 +2,106 @@
 <html lang="en">
 
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home | White Water Rafting</title>
     <meta name="description"
-      content="Explore exciting white water rafting adventures, discover our river trips, and plan your next outdoor experience.">
+      content="Discover safe, exciting white water rafting trips for families and adventure seekers. Find your next river adventure.">
     <meta name="author" content="Caesare Gonzalez">
+    <title>Home | White Water Rafting</title>
     <link rel="stylesheet" href="styles/rafting.css">
 </head>
 
 <body>
-    <header>
-        <img src="images/logo.png" alt="White Water Rafting logo">
-        <nav>
+    <header class="site-header">
+        <a class="brand" href="index.html" aria-label="White Water Rafting home">
+            <img src="images/logo.png" alt="White Water Rafting logo" width="100">
+        </a>
+        <nav class="main-nav" aria-label="Main navigation">
             <a href="index.html">Home</a>
             <a href="about.html">About Us</a>
             <a href="trips.html">Trips</a>
             <a href="contact.html">Contact Us</a>
         </nav>
-
     </header>
-
     <main>
-        <div class="hero">
-            <img src="images/hero.jpg" alt="White water rafting adventure">
-            <h1>White Water Rafting</h1>
-            <article>
-                <img src="images/happy-client.jpg" alt="Happy rafting client">
-                <p>
-                    Our mission is to provide
-
-                    safe, exciting, and unforgettable white water
-                    rafting adventures while creating lasting memories for our guests.
-                </p>
-            </article>
-        </div>
-
-        <section class="newsletter">
-            <h2>Subscribe to Our Newsletter</h2>
-
-            <form>
-                <label for="name">Full Name:</label>
-                <input type="text" id="name" name="name" required>
-                <label for="email">Email Address:</label>
-                <input type="email" id="email" name="email" required>
-                <button type="submit">Subscribe</button>
-            </form>
-
-        </section>
-        <section class="cta">
-            <h2>Ready for Your Next Adventure?</h2>
-            <p>Explore our exciting rafting trips and find your perfect adventure!</p>
-            <a href="trips.html" class="cta-button">Explore Our Trips</a>
-        </section>
-        <section class="history">
-            <h2>History</h2>
-
-            <p>
-                White Water Rafting was founded with a passion for adventure and the outdoors.
-                Over the years, we have helped families, friends, and adventurers experience
-                exciting river journeys in a safe and memorable way.
-            </p>
-
-            <img src="images/happy-client.jpg" alt="White water rafting history">
-
-            <p>
-                Our company continues to provide exciting rafting experiences for guests
-                who want to explore the outdoors, enjoy the river, and create lasting
-                memories with family and friends.
-            </p>
-        </section>
-        <section>
-            <h2>Adventure Awaits You!</h2>
-            <div class="adventures">
-                <figure>
-                    <img src="images/rafting1.avif" alt="Los Dientes del Diablo rafting adventure">
-                    <figcaption>Los Dientes del Diablo</figcaption>
-                </figure>
-
-                <figure>
-                    <img src="images/rafting2.avif" alt="Big Mallard rafting adventure">
-                    <figcaption>Big Mallard</figcaption>
-                </figure>
-
-                <figure>
-                    <img src="images/rafting3.avif" alt="Half Day Adventure rafting trip">
-                    <figcaption>Half Day Adventure</figcaption>
-                </figure>
-
-                <figure>
-                    <img src="images/rafting4.avif" alt="White Water Rush rafting adventure">
-                    <figcaption>White Water Rush</figcaption>
-                </figure>
-
-                <figure>
-                    <img src="images/rafting5.avif" alt="River Expedition rafting adventure">
-                    <figcaption>River Expedition</figcaption>
-                </figure>
+        <section class="hero home-hero" aria-labelledby="home-title">
+            <img class="hero-image" src="images/hero.jpg"
+              alt="Rafting team navigating a white water river">
+            <div class="hero-copy">
+                <h1 id="home-title">Your Next River Adventure Starts Here</h1>
+                <p>Adventure, teamwork, and unforgettable memories on the water.</p>
             </div>
         </section>
+
+        <section class="home-intro" aria-labelledby="welcome-title">
+            <h2 id="welcome-title">Explore the River With Us</h2>
+            <p>At White Water Rafting, we bring people together through exciting, guided river
+                adventures. Whether this is your first trip or your next big challenge, we focus on
+                fun, preparation, and safety.</p>
+        </section>
+
+        <section class="feature-grid" aria-label="Our purpose and offerings">
+            <article class="feature-card">
+                <img src="images/rafting2.avif"
+                  alt="Guests rafting together over rolling white water" loading="lazy">
+                <div class="card-content">
+                    <h2>Adventure for Everyone</h2>
+                    <p>Choose from introductory outings for families, exciting rapids for confident
+                        paddlers, and challenging full-day river trips for experienced adventurers.
+                    </p>
+                </div>
+            </article>
+            <article class="feature-card">
+                <img src="images/rafting3.avif" alt="Rafting group on a scenic outdoor river"
+                  loading="lazy">
+                <div class="card-content">
+                    <h2>Experienced Guides, Lasting Memories</h2>
+                    <p>Our guides explain the equipment and river conditions before each trip. Enjoy
+                        the scenery, learn paddling skills, and experience the outdoors as a team.
+                    </p>
+                </div>
+            </article>
+        </section>
+
+        <section class="cta" aria-labelledby="trips-action-title">
+            <div>
+                <h2 id="trips-action-title">Ready to Make a Splash?</h2>
+                <p>Find a river trip that matches your schedule and skill level.</p>
+            </div>
+            <a class="button" href="trips.html">Explore Our Trips</a>
+        </section>
+
+        <section class="newsletter" aria-labelledby="newsletter-title">
+            <div>
+                <h2 id="newsletter-title">Get River Updates</h2>
+                <p>Sign up for trip news and upcoming adventure announcements.</p>
+            </div>
+            <form action="#" method="get">
+                <div class="form-field">
+                    <label for="newsletter-name">Full Name</label>
+                    <input id="newsletter-name" name="name" type="text" autocomplete="name"
+                      required>
+                </div>
+                <div class="form-field">
+                    <label for="newsletter-email">Email Address</label>
+                    <input id="newsletter-email" name="email" type="email" autocomplete="email"
+                      required>
+                </div>
+                <button type="submit">Subscribe</button>
+            </form>
+            <p class="form-note">Demonstration form for this student website; signups are not
+                stored.</p>
+        </section>
     </main>
-
-    <footer>
-        <p>©2026 ❖ White Water Rafting ❖ Caesare Gonzalez</p>
-
-        <nav class="socialmedia">
-            <a href="https://facebook.com">
-                <img src="images/facebook.png" alt="Facebook">
-            </a>
-            <a href="https://linkedin.com">
-                <img src="images/linkedin.png" alt="LinkedIn">
-            </a>
-            <a href="https://instagram.com">
-                <img src="images/instagram.png" alt="Instagram">
-            </a>
+    <footer class="site-footer">
+        <p>© 2026 ❖ White Water Rafting ❖ Caesare Gonzalez</p>
+        <nav class="socialmedia" aria-label="Social media">
+            <a href="https://facebook.com" aria-label="Facebook"><img src="images/facebook.png"
+                  alt="" width="40" height="40" loading="lazy"></a>
+            <a href="https://linkedin.com" aria-label="LinkedIn"><img src="images/linkedin.png"
+                  alt="" width="40" height="40" loading="lazy"></a>
+            <a href="https://instagram.com" aria-label="Instagram"><img src="images/instagram.png"
+                  alt="" width="40" height="40" loading="lazy"></a>
         </nav>
     </footer>
 </body>

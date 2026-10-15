@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+      content="Compare white water rafting adventures, trip durations, difficulty levels, and sample prices. Contact our team for trip information.">
+    <meta name="author" content="Caesare Gonzalez">
+    <title>Trips | White Water Rafting</title>
+    <link rel="stylesheet" href="styles/rafting.css">
+</head>
+
+<body>
+    <header class="site-header">
+        <a class="brand" href="index.html" aria-label="White Water Rafting home">
+            <img src="images/logo.png" alt="White Water Rafting logo" width="100">
+        </a>
+        <nav class="main-nav" aria-label="Main navigation">
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="trips.html">Trips</a>
+            <a href="contact.html">Contact Us</a>
+        </nav>
+    </header>
+    <main>
+        <section class="trips-heading" aria-labelledby="trips-heading-title">
+            <div>
+                <h1 id="trips-heading-title">Choose Your Rafting Adventure</h1>
+                <p>From gentle introductory rapids to thrilling full-day expeditions, there is a
+                    river experience for every kind of explorer.</p>
+            </div>
+            <a class="button" href="contact.html">Contact Us to Plan a Trip</a>
+        </section>
+
+        <section class="trip-section" aria-labelledby="featured-trips-title">
+            <h2 id="featured-trips-title">Featured Trips</h2>
+            <div class="trip-grid">
+                <article class="trip-card">
+                    <img src="images/rafting3.avif" alt="Rafters enjoying a guided group adventure"
+                      loading="lazy">
+                    <div class="card-content">
+                        <h3>Half Day Adventure</h3>
+                        <p>Perfect for first-time rafters and families. Practice the basics with
+                            your guide, enjoy scenic river stretches, and experience approachable
+                            Class II–III rapids.</p>
+                        <p class="trip-detail"><strong>Duration:</strong> 3
+                            hours<br><strong>Difficulty:</strong> Beginner<br><strong>Minimum
+                                age:</strong> 8</p>
+                    </div>
+                </article>
+                <article class="trip-card">
+                    <img src="images/rafting2.avif"
+                      alt="Rafting team paddling through active river rapids" loading="lazy">
+                    <div class="card-content">
+                        <h3>Big Mallard Rapids</h3>
+                        <p>A lively river trip designed for paddlers who want more action. Navigate
+                            exciting Class III rapids as you build teamwork and confidence with an
+                            experienced guide.</p>
+                        <p class="trip-detail"><strong>Duration:</strong> 5
+                            hours<br><strong>Difficulty:</strong> Intermediate<br><strong>Minimum
+                                age:</strong> 12</p>
+                    </div>
+                </article>
+                <article class="trip-card">
+                    <img src="images/rafting1.avif"
+                      alt="White water rafting through a challenging river section" loading="lazy">
+                    <div class="card-content">
+                        <h3>Los Dientes del Diablo</h3>
+                        <p>Our demanding full-day adventure is for experienced, confident paddlers.
+                            Prepare for sustained Class IV rapids, powerful river sections, and an
+                            exhilarating day outdoors.</p>
+                        <p class="trip-detail"><strong>Duration:</strong> 7
+                            hours<br><strong>Difficulty:</strong> Advanced<br><strong>Minimum
+                                age:</strong> 16</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="trips-table-section" aria-labelledby="all-trips-title">
+            <h2 id="all-trips-title">All Available Trips</h2>
+            <p>Compare each option to find the right fit for your group.</p>
+            <div class="table-scroll">
+                <table>
+                    <caption>Rafting adventure overview — example prices for the class project
+                    </caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">Trip</th>
+                            <th scope="col">Duration</th>
+                            <th scope="col">Skill Level</th>
+                            <th scope="col">Minimum Age</th>
+                            <th scope="col">Price / Person</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">Half Day Adventure</th>
+                            <td>3 hours</td>
+                            <td>Beginner</td>
+                            <td>8+</td>
+                            <td>$65</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">White Water Rush</th>
+                            <td>4 hours</td>
+                            <td>Intermediate</td>
+                            <td>12+</td>
+                            <td>$95</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Big Mallard Rapids</th>
+                            <td>5 hours</td>
+                            <td>Intermediate</td>
+                            <td>12+</td>
+                            <td>$110</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Los Dientes del Diablo</th>
+                            <td>7 hours</td>
+                            <td>Advanced</td>
+                            <td>16+</td>
+                            <td>$165</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">River Expedition</th>
+                            <td>2 days</td>
+                            <td>Intermediate</td>
+                            <td>14+</td>
+                            <td>$280</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="cta" aria-label="Contact us about a trip">
+            <div>
+                <h2>Questions About Your Adventure?</h2>
+                <p>Our team is ready to help you choose the right experience.</p>
+            </div>
+            <a class="button" href="contact.html">Contact Our Team</a>
+        </section>
+    </main>
+    <footer class="site-footer">
+        <p>© 2026 ❖ White Water Rafting ❖ Caesare Gonzalez</p>
+        <nav class="socialmedia" aria-label="Social media">
+            <a href="https://facebook.com" aria-label="Facebook"><img src="images/facebook.png"
+                  alt="" width="40" height="40" loading="lazy"></a>
+            <a href="https://linkedin.com" aria-label="LinkedIn"><img src="images/linkedin.png"
+                  alt="" width="40" height="40" loading="lazy"></a>
+            <a href="https://instagram.com" aria-label="Instagram"><img src="images/instagram.png"
+                  alt="" width="40" height="40" loading="lazy"></a>
+        </nav>
+    </footer>
+</body>
+
+</html>
