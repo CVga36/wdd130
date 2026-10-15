@@ -1,19 +1,30 @@
+/* Shared stylesheet for all four White Water Rafting pages */
 :root {
     --primary-color: #055a8c;
     --accent1-color: #023047;
+    --light-color: #eaf4f8;
+    --border-color: #ccdce6;
     --heading-font: Arial, sans-serif;
     --body-font: Arial, sans-serif;
 }
 
 * {
-    margin: 0;
-    padding: 0;
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
-    font-family: var(--body-font);
+    margin: 0;
     color: var(--accent1-color);
+    font-family: var(--body-font);
+    line-height: 1.55;
+}
+
+img {
+    max-width: 100%;
 }
 
 header,
@@ -21,25 +32,116 @@ main,
 footer {
     width: 100%;
     max-width: 840px;
-    margin: 0 auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+main {
+    padding-bottom: 16px;
 }
 
 h1,
-h2 {
+h2,
+h3 {
     font-family: var(--heading-font);
-    color: var(--primary-color);
+    line-height: 1.2;
 }
 
-nav,
-p,
-section,
-article {
-    margin: 16px;
-    padding: 8px;
+h1 {
+    font-size: clamp(1.65rem, 4vw, 2.5rem);
+}
+
+h2 {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+}
+
+h3 {
+    color: var(--accent1-color);
+    font-size: 1.2rem;
+}
+
+p {
+    margin: 0.6rem 0 1rem;
+}
+
+section {
+    margin: 24px 16px;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+    outline: 3px solid #cc6500;
+    outline-offset: 3px;
+}
+
+/* Consistent site chrome */
+.site-header {
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 16px;
+    background: var(--primary-color);
+}
+
+.brand {
+    display: inline-flex;
+    align-items: center;
+}
+
+.brand img {
+    display: block;
+    width: 100px;
+    height: auto;
+}
+
+.main-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.main-nav a {
+    display: inline-block;
+    padding: 9px;
+    color: #fff;
+    font-weight: 700;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+.main-nav a:hover,
+.main-nav a:focus-visible {
+    background: var(--accent1-color);
+}
+
+.site-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding: 14px 16px;
+    border-top: 1px solid var(--primary-color);
+}
+
+.site-footer p {
+    margin: 0;
+}
+
+.socialmedia {
+    display: flex;
+    align-items: center;
+    gap: 12px;
 }
 
 .socialmedia a {
-    text-decoration: none;
+    display: inline-flex;
 }
 
 .socialmedia img {
@@ -47,27 +149,315 @@ article {
     height: 40px;
 }
 
-.adventures {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
+/* Hero pages */
+.hero {
+    position: relative;
+    margin: 0;
+    overflow: hidden;
 }
 
-.adventures figure {
+.hero-image {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.about-hero h1 {
+    position: absolute;
+    top: 12px;
+    left: 0;
+    width: 100%;
+    padding: 12px;
+    margin: 0;
+    color: #fff;
+    background: var(--accent1-color);
     text-align: center;
 }
 
-.adventures img {
+.about-hero article {
+    position: absolute;
+    bottom: 14px;
+    right: 14px;
+    left: 14px;
+    display: flow-root;
+    padding: 12px;
+    background: #fff;
+    color: var(--accent1-color);
+}
+
+.about-hero article img {
+    width: 112px;
+    height: 85px;
+    object-fit: cover;
+    float: right;
+    margin-left: 16px;
+}
+
+.about-hero article p {
+    margin: 0;
+}
+
+.home-hero {
+    margin-bottom: 26px;
+    background: var(--accent1-color);
+}
+
+.home-hero .hero-image {
+    max-height: 390px;
+    min-height: 310px;
+    object-fit: cover;
+    filter: brightness(0.58);
+}
+
+.home-hero .hero-copy {
+    position: absolute;
+    left: 5%;
+    right: 5%;
+    top: 50%;
+    transform: translateY(-50%);
+    max-width: 660px;
+    color: #fff;
+}
+
+.home-hero h1 {
+    margin: 0 0 12px;
+    color: #fff;
+}
+
+.home-hero p {
+    margin: 0;
+    font-size: 1.12rem;
+}
+
+/* Home page */
+.home-intro {
+    max-width: 700px;
+    text-align: center;
+    margin: 30px auto;
+    padding: 0 16px;
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.feature-card,
+.trip-card {
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    background: #fff;
+    box-shadow: 0 2px 7px rgb(2 48 71 / 8%);
+}
+
+.feature-card > img,
+.trip-card > img {
+    display: block;
     width: 100%;
-    height: 100px;
+    height: 205px;
     object-fit: cover;
 }
 
-.adventures figcaption {
-    margin-top: 5px;
+.card-content {
+    padding: 16px;
+}
+
+.card-content h2,
+.card-content h3 {
+    margin: 0 0 10px;
+}
+
+.card-content p {
+    margin-bottom: 0;
+}
+
+.cta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding: 24px;
+    border-radius: 8px;
+    background: var(--light-color);
+}
+
+.cta h2 {
+    margin: 0;
+}
+
+.cta p {
+    margin-bottom: 0;
+}
+
+.button,
+button {
+    display: inline-block;
+    padding: 12px 18px;
+    background: var(--primary-color);
+    border: 0;
+    border-radius: 5px;
+    color: #fff;
+    text-decoration: none;
+    font: 700 1rem var(--body-font);
+    cursor: pointer;
+    text-align: center;
+}
+
+.button:hover,
+button:hover {
+    background: var(--accent1-color);
+}
+
+.newsletter {
+    display: grid;
+    grid-template-columns: 1fr 1.25fr;
+    column-gap: 22px;
+    align-items: start;
+    padding: 24px;
+    border-radius: 8px;
+    background: #f5f9fb;
+}
+
+.newsletter h2 {
+    margin-top: 0;
+}
+
+.newsletter form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    align-items: end;
+}
+
+.newsletter button {
+    grid-column: 1 / -1;
+}
+
+.form-field {
+    display: grid;
+    gap: 6px;
+}
+
+label {
+    font-weight: 700;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    min-width: 0;
+    padding: 10px;
+    border: 1px solid #6b7d86;
+    border-radius: 5px;
+    font: inherit;
+    background: #fff;
+    color: var(--accent1-color);
+}
+
+.form-note {
+    font-size: 0.85rem;
+    color: #3a5260;
+}
+
+.newsletter > .form-note {
+    grid-column: 1 / -1;
+    margin-bottom: 0;
+}
+
+/* Trips page */
+.trips-heading {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 22px;
+    align-items: center;
+    background: var(--light-color);
+    border-radius: 8px;
+    padding: 26px;
+}
+
+.trips-heading h1 {
+    margin: 0;
+    color: var(--accent1-color);
+}
+
+.trips-heading p {
+    margin-bottom: 0;
+}
+
+.trip-section h2 {
+    text-align: center;
+}
+
+.trip-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.trip-card > img {
+    height: 160px;
+}
+
+.trip-card .card-content {
+    padding: 14px;
+}
+
+.trip-detail {
+    padding: 12px;
+    border-radius: 5px;
+    background: var(--light-color);
     font-size: 0.9rem;
 }
 
+.trips-table-section {
+    padding: 18px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+}
+
+.trips-table-section h2 {
+    margin-top: 0;
+}
+
+.table-scroll {
+    width: 100%;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    min-width: 570px;
+    border-collapse: collapse;
+    font-size: 0.92rem;
+}
+
+caption {
+    text-align: left;
+    font-size: 0.85rem;
+    padding: 8px 0;
+    color: #3a5260;
+}
+
+th,
+td {
+    padding: 10px;
+    border: 1px solid var(--border-color);
+    text-align: left;
+}
+
+thead {
+    background: var(--primary-color);
+    color: #fff;
+}
+
+tbody tr:nth-child(even) {
+    background: var(--light-color);
+}
+
+/* About Us page */
 .history {
     display: grid;
     grid-template-columns: 1fr 200px 1fr;
@@ -76,178 +466,231 @@ article {
 }
 
 .history h2 {
-    grid-column: 1 / 4;
+    grid-column: 1 / -1;
     text-align: center;
+    margin-bottom: 0;
 }
 
 .history img {
     width: 200px;
-    height: auto;
+    height: 140px;
+    object-fit: cover;
 }
 
-.hero {
-    position: relative;
+.adventures-section h2 {
+    text-align: center;
 }
 
-.hero img {
+.adventures {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.adventures figure {
+    margin: 0;
+    text-align: center;
+}
+
+.adventures img {
     display: block;
     width: 100%;
-    height: auto;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 5px;
 }
 
-.hero h1 {
-    position: absolute;
-    top: 20px;
-    width: 100%;
-    padding: 16px;
+.adventures figcaption {
+    margin-top: 6px;
+    font-weight: 700;
+}
+
+/* Contact Us page */
+.contact-heading {
     text-align: center;
-    opacity: 0.7;
-    background-color: var(--accent1-color);
-    color: #fff;
 }
 
-.hero article {
-    position: absolute;
-    bottom: 20px;
-    left: 20px;
-    right: 20px;
-    padding: 16px;
-    background-color: rgb(255 255 255 / 0.8);
-    color: var(--accent1-color);
-}
-
-.hero article img {
-    float: right;
-    width: 125px;
-    margin-left: 16px;
-}
-
-header {
+.contact-info {
     display: grid;
-    grid-template-columns: 120px 1fr;
-    align-items: center;
-    background-color: var(--primary-color);
-    padding: 10px;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr);
+    align-items: start;
+    gap: 16px;
 }
 
-header img {
-    width: 100px;
-    height: auto;
-}
-
-header nav {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
-
-header nav a {
-    color: white;
-    text-decoration: none;
-    padding: 10px;
-    font-weight: bold;
-}
-
-footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 20px;
-    border-top: 1px solid var(--primary-color);
-}
-
-footer .socialmedia {
-    display: flex;
-    gap: 10px;
-}
-
-/* Newsletter */
-.newsletter {
-    background-color: #eaf4f8;
-    padding: 20px;
+.contact-info iframe {
+    width: 100%;
+    max-width: 100%;
+    border: 0;
     border-radius: 8px;
+}
+
+.employees h2 {
     text-align: center;
 }
 
-.newsletter form {
+.employee-profiles {
     display: grid;
-    gap: 10px;
-    margin-top: 15px;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
 }
 
-.newsletter input {
-    padding: 10px;
-    width: 100%;
-}
-
-.newsletter button {
-    background-color: var(--primary-color);
-    color: white;
-    padding: 12px;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.cta-button {
-    display: inline-block;
-    text-decoration: none;
-    background-color: var(--primary-color);
-    color: white;
-    padding: 12px 20px;
-    border-radius: 5px;
-}
-
-.cta {
+.employee-profiles figure {
+    margin: 0;
     text-align: center;
-    background-color: #eaf4f8;
-    padding: 24px;
 }
 
-/* Contact Form */
+.employee-profiles img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.employee-profiles figcaption {
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+
 .contact-form {
-    background-color: #eaf4f8;
     padding: 24px;
+    background: var(--light-color);
     border-radius: 8px;
+}
+
+.contact-form h2 {
+    margin-top: 0;
 }
 
 .contact-form form {
     display: grid;
-    gap: 15px;
-    margin-top: 20px;
-}
-
-.contact-form input[type="text"],
-.contact-form textarea {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #999;
-    border-radius: 5px;
-    font-family: var(--body-font);
-    font-size: 1rem;
+    gap: 14px;
 }
 
 .contact-form fieldset {
-    border: 1px solid #999;
+    padding: 12px;
+    border: 1px solid #6b7d86;
     border-radius: 5px;
-    padding: 15px;
 }
 
 .contact-form legend {
-    font-weight: bold;
-    padding: 0 8px;
+    font-weight: 700;
+    padding: 0 5px;
+}
+
+.radio-line,
+.checkbox-line {
+    display: flex;
+    gap: 8px;
+    align-items: baseline;
+    margin: 6px 0;
+}
+
+.radio-line label,
+.checkbox-line label {
+    font-weight: 400;
 }
 
 .contact-form button {
-    background-color: var(--primary-color);
-    color: white;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 5px;
-    font-size: 1rem;
-    font-weight: bold;
-    cursor: pointer;
+    justify-self: start;
 }
 
-.contact-form input[type="radio"] {
-    margin: 10px 5px 10px 0;
+/* Keep multi-column desktop layouts, adapt for narrower viewports */
+@media (max-width: 700px) {
+    .newsletter {
+        grid-template-columns: 1fr;
+    }
+
+    .trips-heading {
+        grid-template-columns: 1fr;
+    }
+
+    .trip-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .history {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .history h2 {
+        grid-column: 1 / -1;
+    }
+
+    .history img {
+        grid-column: 1 / -1;
+        width: 100%;
+        max-height: 240px;
+    }
+
+    .contact-info {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 520px) {
+    .site-header {
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
+
+    .main-nav {
+        justify-content: center;
+    }
+
+    .main-nav a {
+        padding: 8px;
+    }
+
+    .feature-grid,
+    .trip-grid,
+    .employee-profiles,
+    .adventures {
+        grid-template-columns: 1fr;
+    }
+
+    .newsletter form {
+        grid-template-columns: 1fr;
+    }
+
+    .cta {
+        flex-direction: column;
+        align-items: stretch;
+        text-align: center;
+    }
+
+    .history {
+        display: block;
+    }
+
+    .history img {
+        display: block;
+        margin: auto;
+    }
+
+    .home-hero .hero-image {
+        min-height: 300px;
+    }
+
+    .about-hero {
+        display: grid;
+    }
+
+    .about-hero h1 {
+        position: static;
+        font-size: 1.5rem;
+    }
+
+    .about-hero article {
+        position: static;
+    }
+
+    .about-hero .hero-image {
+        max-height: 230px;
+        object-fit: cover;
+    }
+
+    .site-footer {
+        justify-content: center;
+        text-align: center;
+    }
 }
